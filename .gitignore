@@ -1,0 +1,29 @@
+@'
+# dipendenze e build
+node_modules
+dist
+dist-ssr
+
+# segreti e file locali
+.env
+.env.*
+!.env.example
+*.local
+
+# Vercel
+.vercel
+
+# log ed editor
+logs
+*.log
+npm-debug.log*
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+'@ | Set-Content -Encoding ascii .gitignore
+
+@'
+VITE_SUPABASE_URL=inserisci_url_del_progetto_supabase
+VITE_SUPABASE_ANON_KEY=inserisci_la_anon_key
+'@ | Set-Content -Encoding ascii .env.example
